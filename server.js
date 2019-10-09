@@ -19,7 +19,7 @@ app.use('/api/partner', partner);
 app.use('/api/order', order);
 
 if(process.env.NODE_ENV === 'production'){
-    app.get(/.*/, (req,res) => res.sendFile(__dirname + '/dist/spa/index.html' ))
+    app.get(/.*/, (req,res) => res.sendFile(__dirname + '/public/index.html' ))
 }
 
 app.use(history())
