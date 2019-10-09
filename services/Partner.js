@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'production' ? 'api/partners/' : 'http://localhost:5000/api/partners/'
+const url = process.env.NODE_ENV === 'production' ? 'api/partner/' : 'http://localhost:5000/api/partner/'
 //const url = 'http://localhost:5000/api/partner/'
 
 class PartnerService{
