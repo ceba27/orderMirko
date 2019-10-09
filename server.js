@@ -18,6 +18,10 @@ const order = require('./server/order');
 app.use('/api/partner', partner);
 app.use('/api/order', order);
 
+if(process.env.NODE_ENV === 'production'){
+    app.get(/.*/, (req,res) => res.sendFile(__dirname + '/dist/spa/index.html' ))
+}
+
 app.use(history())
 app.use(serveStatic(__dirname + '/dist/spa'))
 app.listen(port)
